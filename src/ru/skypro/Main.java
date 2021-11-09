@@ -3,10 +3,10 @@ package ru.skypro;
 public class Main {
 
     public static void main(String[] args) {
-        author dostoevskiy = new author("Фёдор","Достоевский");
-        author pushkin = new author("Александр","Пушкин");
-    book jidYankel = new book("Жид Янкель",dostoevskiy,1844);
-    book evgeniyOnegin = new book("Евгений Онегин",pushkin,1833);
+        Author dostoevskiy = new Author("Фёдор","Достоевский");
+        Author pushkin = new Author("Александр","Пушкин");
+    Book jidYankel = new Book("Жид Янкель",dostoevskiy,1844);
+    Book evgeniyOnegin = new Book("Евгений Онегин",pushkin,1833);
     System.out.println("Книга 2 " + evgeniyOnegin.getbookName() + " Автор " + evgeniyOnegin.getauthorName() + " год публикации " + evgeniyOnegin.getYearPublication());
     evgeniyOnegin.setYearPublication(1834);
     System.out.println("После изменения года у 'Евгений онегин'");
