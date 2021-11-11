@@ -8,14 +8,25 @@ public class Book {
     private int yearPublication;
 
 
-    public Book (String bookName, Author authorName, int yearPublication){
+    public Book (String bookName, Author author, int yearPublication){
         this.bookName = bookName;
-        this.authorName = authorName;
+        this.authorName = author;
         yearPublication = yearPublication;
 
     }
 
-
+    public String getBookName(){
+        return this.bookName;
+    }
+    public Author getAuthor(){
+        return authorName;
+    }
+    public int getYearPublication(){
+        return yearPublication;
+    }
+    public void setYearPublication(int yearPublication){
+        yearPublication = yearPublication;
+    }
     @Override
     public String toString() {
         return "Book{" +
@@ -38,19 +49,5 @@ public class Book {
     public int hashCode() {
         return Objects.hash(bookName, authorName, yearPublication);
     }
-
-    public String getbookName(){
-        return this.bookName;
-    }
-    public Author getauthorName(){
-        return authorName;
-    }
-    public int getYearPublication(){
-        return yearPublication;
-    }
-    public void setYearPublication(int yearPublication){
-        yearPublication = yearPublication;
-    }
-
 
 }
