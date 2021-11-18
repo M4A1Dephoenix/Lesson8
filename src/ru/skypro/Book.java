@@ -3,23 +3,23 @@ package ru.skypro;
 import java.util.Objects;
 
 public class Book {
-    final String Name;
-    final Author authorName;
+    private final String name;
+    private final Author author;
     private int yearPublication;
 
 
-    public Book (String bookName, Author author, int yearPublication){
-        this.Name = Name;
-        this.authorName = author;
-        yearPublication = yearPublication;
+    public Book (String name, Author author, int yearPublication){
+        this.name = name;
+        this.author = author;
+        this.yearPublication = yearPublication;
 
     }
 
     public String getName(){
-        return this.Name;
+        return this.name;
     }
     public Author getAuthor(){
-        return authorName;
+        return author;
     }
     public int getYearPublication(){
         return yearPublication;
@@ -30,8 +30,8 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "Name='" + Name + '\'' +
-                ", authorName=" + authorName.toString() +
+                "Name='" + name + '\'' +
+                ", authorName=" + author.toString() +
                 ", yearPublication=" + yearPublication +
                 '}';
     }
@@ -42,12 +42,12 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return yearPublication == book.yearPublication && Objects.equals(Name, book.Name) && Objects.equals(Name, book.Name);
+        return yearPublication == book.yearPublication && Objects.equals(name, book.name) && Objects.equals(name, book.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Name,Name, yearPublication);
+        return Objects.hash(name,name, yearPublication);
     }
 
 }
